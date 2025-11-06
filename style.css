@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffb6c1, #ff4d6d);
+  color: #fff;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  margin-top: 30px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #ffe9ef;
+}
+
+/* --- CARROSSEL AJUSTADO PARA FOTOS VERTICAIS --- */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 40px;
+  height: 1200px; /* altura total do carrossel */
+  background: rgba(255, 255, 255, 0.1); /* fundo suave nas laterais */
+}
+
+/* container de todas as imagens duplicadas */
+.slides {
+  display: flex;
+  width: calc(100% * 38); /* 19 imagens originais + 19 duplicadas */
+  height: 100%;
+  animation: scroll 120s linear infinite; /* movimento contínuo */
+}
+
+/* cada imagem */
+.slides img {
+  width: calc(100% / 19); /* cada imagem ocupa 1/19 da largura visível */
+  height: 100%;
+  object-fit: contain; /* mostra a imagem inteira, sem cortar */
+  object-position: center center; /* centraliza no quadro */
+  background-color: rgba(255, 255, 255, 0.08); /* fundo suave nas laterais */
+  border-radius: 10px; /* bordas arredondadas */
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* animação contínua tipo “esteira” */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* percorre metade porque duplicamos as imagens */
+}
+
+/* responsivo */
+@media (max-width: 900px) {
+  .carousel {
+    height: 800px;
+  }
+}
+
+@media (max-width: 600px) {
+  .carousel {
+    height: 600px;
+  }
+}
+
+
+/* --- RESTANTE DO ESTILO --- */
+.message {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  padding: 25px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.message h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.message p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #fffafc;
+}
+
+footer {
+  margin-top: 40px;
+  font-size: 1.1rem;
+}
+
+footer span {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.8rem;
+  color: #ffe5ec;
+}
+
+audio {
+  margin-bottom: 32px;
+}
