@@ -111,3 +111,8 @@ footer span {
 audio {
   margin-bottom: 32px;
 }
+
+p .first-letter {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+}
