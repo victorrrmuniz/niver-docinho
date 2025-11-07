@@ -112,7 +112,12 @@ audio {
   margin-bottom: 32px;
 }
 
-p .first-letter {
+p .styled-font {
   font-family: 'Great Vibes', cursive;
+  font-size: 2rem;
+}
+
+p .first-letter {
   font-size: 3rem;
+  font-family: 'Great Vibes', cursive;
 }
